@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #c5a880;
+    --gold-light: #e6ca95;
+    --gold-dark: #9a7d55;
+    --dark-bg: #0c0c0e;
+    --card-bg: #141417;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0b0b0d;
+    color: #ede8df;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', 'Cormorant Garamond', 'Plus Jakarta Sans', serif;
+  }
+
+  .font-italiana {
+    font-family: 'Italiana', serif;
+  }
+
+  .font-tenor {
+    font-family: 'Tenor Sans', sans-serif;
+  }
+
+  .font-bellefair {
+    font-family: 'Bellefair', serif;
+  }
+
+  .font-prata {
+    font-family: 'Prata', serif;
+  }
+
+  .font-jost {
+    font-family: 'Jost', sans-serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-cormorant,
+  .font-cormorant-garamond {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-marcellus {
+    font-family: 'Marcellus', Georgia, serif;
+  }
+
+  .font-playfair,
+  .font-playfair-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .perfume-name-cormorant,
+  .perfume-title-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.025em;
+    font-weight: 500;
+  }
+
+  .perfume-name-playfair,
+  .perfume-title-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: 0.015em;
+    font-weight: 500;
+  }
+
+  .perfume-name-marcellus,
+  .perfume-title-marcellus {
+    font-family: 'Marcellus', Georgia, serif;
+    letter-spacing: 0.035em;
+    font-weight: 400;
+  }
+
+  .font-syne {
+    font-family: 'Syne', sans-serif;
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-manrope {
+    font-family: 'Manrope', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-serif, .font-serif-luxury {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a30;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+.gold-gradient-text {
+  color: #ede7dc;
+}
+
+.gold-gradient-bg {
+  background-color: #ded7cc;
+  color: #141312;
+}
+
+.gold-border-glow:hover {
+  border-color: #4a453b;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite ease-in-out;
+}
+
+@keyframes cardFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-card-fade {
+  animation: cardFadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  will-change: opacity, transform;
+}
+
+@keyframes kenBurnsSlow {
+  0% {
+    transform: scale(1.05) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.14) translate(-1.5%, -1%);
+  }
+
+  100% {
+    transform: scale(1.05) translate(0, 0);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsSlow 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes floatLuxury {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0.6deg);
+  }
+}
+
+.animate-float-luxury {
+  animation: floatLuxury 4.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes shadowBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(0.84);
+    opacity: 0.45;
+  }
+}
+
+.animate-shadow-breathe {
+  animation: shadowBreathe 4.8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.animate-light-sweep {
+  animation: lightSweep 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes filmGrainPulse {
+  0%, 100% {
+    opacity: 0.035;
+  }
+
+  50% {
+    opacity: 0.06;
+  }
+}
+
+.animate-film-grain {
+  animation: filmGrainPulse 3s ease-in-out infinite;
+}
+
+@media print {
+  #floating-whatsapp,
+  header div.sm\:absolute,
+  .fixed,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  body {
+    background-color: #0b0b0d !important;
+    color: #ede8df !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .grid > div,
+  article,
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
