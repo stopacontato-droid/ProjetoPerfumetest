@@ -1,0 +1,6 @@
+{
+  "name": "L'ÉLIXIR - Haute Parfumerie & Decantes",
+  "description": "Boutique exclusiva de perfumes importados de luxo, fragrâncias árabes autênticas e decantes selecionados. Encontre sua assinatura olfativa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
